@@ -1,0 +1,8 @@
+.animation-images {
+  width: 100%;
+  border: 1px solid black;
+  height: 400px;
+  background-color: cornflowerblue;
+  margin: 20px auto 0;
+  opacity: 0.2;
+}

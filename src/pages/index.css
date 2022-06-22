@@ -6,3 +6,13 @@
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/logo/__img/logo__img.css);
 @import url(../blocks/logo/__text/logo__text.css);
+@import url(../blocks/menu/menu.css);
+@import url(../blocks/container/container.css);
+@import url(../blocks/tab-control/tab-control.css);
+@import url(../blocks/tab-item/tab-item.css);
+@import url(../blocks/tab-item/__text/tab-item__text.css);
+@import url(../blocks/tab-item/__img/tab-item__img.css);
+@import url(../blocks/search-link/search-link.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/animation-images/animation-images.css);

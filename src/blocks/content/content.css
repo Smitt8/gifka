@@ -1,58 +1,19 @@
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+
+
+
+
+
+
+
+/*переделать*/
+
+.btn-reset{
+  height: 40px;
+  width: 40px;
 }
 
-.form{
-  width: 600px;
-  margin: 0 auto;
-}
-
-.search-link {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.input {
-  width: 400px;
-  border: 1px solid black;
-}
-
-.menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
-.tab-control {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.ttt{
-  width: 600px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.tab-item {
-  color: black;
-  width: 100px;
-  text-align: center;
-  border-bottom: 2px solid cornflowerblue;
-}
-
-.animation-images {
-  margin: 0 auto;
-  width: 600px;
-  border: 1px solid black;
-  height: 400px;
-  background-color: cornflowerblue;
-  margin-top: 20px;
-  opacity: 0.2;
+.btn-search {
+  height: 40px;
+  width: 80px;
 }

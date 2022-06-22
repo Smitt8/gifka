@@ -1,0 +1,12 @@
+.tab-item__img {
+  height: 100%;
+  width: 50px;
+  background-color: #309ED0;
+  margin-right: 10px;
+}
+
+
+.tab-item__img1 {
+  width: 50px;
+  object-fit: contain;
+}

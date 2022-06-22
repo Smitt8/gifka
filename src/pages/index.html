@@ -13,53 +13,64 @@
 <header class="header">
   <div class="logo">
     <div class="logo__img"></div>
-    <div class="logo__text">Поиск гифки</div>
+    <!--    <div class="logo__text">Поиск гифки</div>-->
   </div>
 </header>
 <main class="content">
-
-
   <section class="menu">
-
-    <div class="tab-control">
-      <div class="ttt">
-        <div class="tab-item">1 tab-item</div>
-        <div class="tab-item">2 tab-item</div>
-        <div class="tab-item">3 tab-item</div>
-        <div class="tab-item">4 tab-item</div>
+    <div class="container">
+      <div class="tab-control">
+        <div class="tab-item">
+          <div class="tab-item__img">
+          </div>
+          <div class="tab-item__text">Случайная гифка</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__img"></div>
+          <div class="tab-item__text">Тренды</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__img"></div>
+          <div class="tab-item__text">Добавить новую</div>
+        </div>
+        <div class="tab-item">
+          <div class="tab-item__img"></div>
+          <div class="tab-item__text">Поиск</div>
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!--  поисковая строка -->
-  <section class="search-link">
-    <form class="form" name="form" novalidate>
-      <div class="ttt">
-        <label class="field">
-          <input class="input input-link"
-                 type="url"
-                 name='link'
-                 placeholder="введите  название"
-                 id="link"
-                 required>
-          <span class="error"
-                id="link-error"></span>
-        </label>
-        <button class="btn-reset" type="button">Reset</button>
-        <button class="btn-search" type="submit">Search</button>
+    <!--  поисковая строка -->
+    <section class="search-link">
+      <div class="container">
+      <form class="form" name="form" novalidate>
+          <label class="field">
+            <input class="form__input input-link"
+                   type="url"
+                   name='link'
+                   placeholder="     Введите  название"
+                   id="link"
+                   required>
+            <span class="error"
+                  id="link-error"></span>
+          </label>
+          <button class="btn-reset" type="button">.</button>
+          <button class="btn-search" type="submit">Search</button>
+      </form>
       </div>
-    </form>
+    </section>
 
-  </section>
+    <!--контейнер для гифок-->
+    <section class="animation-images">
+      <div class="container">
+        <ul class="animation-images__list">
+        </ul>
+      </div>
+    </section>
 
-  <!--контейнер для гифок-->
-  <section class="animation-images">
-    <ul class="animation-images__list">
-    </ul>
-  </section>
-
-</main>
+  <!--</main>-->
 
 </body>
 <script type="module" src="./index.js"></script>
