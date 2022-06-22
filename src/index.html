@@ -45,16 +45,16 @@
     <!--  поисковая строка -->
     <section class="search-link">
       <div class="container">
-      <form class="form" name="form" novalidate>
+      <form class="form" name="search" novalidate>
           <label class="field">
             <input class="form__input input-link"
-                   type="url"
-                   name='link'
+                   type="text"
+                   name='search-query'
                    placeholder="     Введите  название"
                    id="link"
                    required>
             <span class="error"
-                  id="link-error"></span>
+                  id="search-query-error"></span>
           </label>
           <button class="btn-reset" type="button">.</button>
           <button class="btn-search" type="submit">Search</button>
