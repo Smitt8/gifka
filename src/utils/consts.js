@@ -6,5 +6,5 @@ export const giphyConfig = {
 export const formConfig = {
   formSelector: ".form",
   inputSelector: ".form__input",
-  resetSelector: ".btn-reset"
+  resetSelector: ".btn_reset"
 };

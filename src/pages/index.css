@@ -16,3 +16,7 @@
 @import url(../blocks/form/form.css);
 @import url(../blocks/form/__input/form__input.css);
 @import url(../blocks/animation-images/animation-images.css);
+@import url(../blocks/animation-images/__list/animation-images__list.css);
+@import url(../blocks/btn/btn.css);
+@import url(../blocks/animation-images/__item/animation-images__item.css);
+@import url(../blocks/gif/gif.css);

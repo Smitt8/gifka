@@ -22,16 +22,17 @@ export default class Api {
     .then(result => {
       return this._checkResult(result);
     });
-  }
+  };
 
   searchGifs = (query) => {
     return fetch(`${this._url}/search?api_key=${this._token}&q=${query}&limit=25`, {
       headers: this._headers,
     })
     .then(result => {
+      console.log(result);
       return this._checkResult(result);
     })
-  }
+  };
 
   getRandom = () => {
     return fetch(`${this._url}/random?api_key=${this._token}`, {
