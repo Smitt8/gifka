@@ -5,6 +5,7 @@
   flex-direction: row;
   border-radius: 10px;
   justify-content: space-between;
+  position: relative;
 }
 
 

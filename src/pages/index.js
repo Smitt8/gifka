@@ -3,6 +3,7 @@ import "./index.css";
 
 import Api from "../components/api.js";
 import Form from "../components/Form.js";
+import SearchForm from "../components/SearchForm.js";
 
 import Section from "../components/Section.js";
 import Gif from "../components/Gif.js";
@@ -14,7 +15,7 @@ import {
 
 const api = new Api(giphyConfig);
 
-const searchForm = new Form(searchConfig, handleSearchGif);
+const searchForm = new SearchForm(searchConfig, handleSearchGif);
 
 function addGif(link) {
   const giphy = new Gif(link, '#template-item');
