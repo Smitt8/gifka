@@ -13,4 +13,11 @@ export default class Section {
       this._renderer(item);
     });
   }
+
+  free() {
+    while (this._container.firstChild) {
+      this._container.removeChild(this._container.firstChild);
+    }
+  }
+  
 }

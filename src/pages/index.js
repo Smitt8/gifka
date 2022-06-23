@@ -34,6 +34,7 @@ function handleSearchGif(event, values) {
   event.preventDefault();
   api.searchGifs(values["search-query"])
   .then( giphy => {
+    listContainer.free();
     giphy.data.forEach(item => {
       listContainer.addItem(addGif(`https://media1.giphy.com/media/${item.id}/giphy.gif`));
     });
