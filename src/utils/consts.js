@@ -6,5 +6,6 @@ export const giphyConfig = {
 export const searchConfig = {
   formSelector: ".search",
   inputSelector: ".search__input",
-  resetSelector: ".search__reset"
+  resetSelector: ".search__reset",
+  activeResetClass: "search__reset_enabled",
 };
