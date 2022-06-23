@@ -22,14 +22,15 @@ function addGif(link) {
   return giphy.generateItem();
 }
 
+const listContainer = new Section((giphy) => {
+  listContainer.addItem(addGif(giphy.link));
+}, ".animation-images__list");
+
 /**
  *
  * @param {Event} event
  * @param {*} inputs
  */
-const listContainer = new Section((giphy) => {
-  listContainer.addItem(addGif(giphy.link));
-}, ".animation-images__list");
 
 function handleSearchGif(event, values) {
   event.preventDefault();
