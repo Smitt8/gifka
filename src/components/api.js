@@ -29,7 +29,7 @@ export default class Api {
       headers: this._headers,
     })
     .then(result => {
-      // console.log(result);
+      console.log(result);
       return this._checkResult(result);
     })
   };

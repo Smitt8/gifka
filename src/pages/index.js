@@ -33,9 +33,10 @@ const listContainer = new Section((giphy) => {
 function handleSearchGif(event, values) {
   event.preventDefault();
   api.searchGifs(values["search-query"])
-  .then( data => {
-    // console.log(data.id);
-    listContainer.addItem(addGif(`https://media1.giphy.com/media/${data.id}/giphy.gif`))
+  .then( giphy => {
+    giphy.data.forEach(item => {
+      listContainer.addItem(addGif(`https://media1.giphy.com/media/${item.id}/giphy.gif`));
+    });
   })
   .catch(err => {
     console.log(err);
