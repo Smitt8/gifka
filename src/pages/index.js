@@ -9,12 +9,12 @@ import Gif from "../components/Gif.js";
 
 import {
   giphyConfig,
-  formConfig
+  searchConfig
 } from "../utils/consts.js"
 
 const api = new Api(giphyConfig);
 
-const searchForm = new Form(formConfig, handleSearchGif);
+const searchForm = new Form(searchConfig, handleSearchGif);
 
 function addGif(link) {
   const giphy = new Gif(link, '#template-item');
