@@ -1,6 +1,6 @@
 .form__input {
   width: 600px;
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   height: 40px;
   border: 1px solid black;
 }

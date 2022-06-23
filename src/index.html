@@ -5,6 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Natalya Krukova & Igor Prokazov"/>
+<!--  <link href="./pages/index.css" rel="stylesheet">-->
   <title>GifKA</title>
 </head>
 <body class="page">
@@ -41,35 +42,41 @@
   </section>
 
 
-    <!--  поисковая строка -->
-    <section class="search-link">
-      <div class="container">
+  <!--  поисковая строка -->
+  <section class="search-link">
+    <div class="container">
       <form class="form" name="search" novalidate>
+        <div class="field-constant">
+          <button class="btn btn_search" type="submit">SEARCH</button>
           <label class="field">
             <input class="form__input input-link"
                    type="text"
                    name='search-query'
-                   placeholder="     Введите  название"
+                   placeholder="Поиск по тегу"
                    id="link"
                    required>
             <span class="error"
                   id="search-query-error"></span>
           </label>
-          <button class="btn-reset" type="button">.</button>
-          <button class="btn-search" type="submit">Search</button>
+          <button class="btn btn_reset" type="button">RESET</button>
+        </div>
       </form>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!--контейнер для гифок-->
-    <section class="animation-images">
-      <div class="container">
-        <ul class="animation-images__list">
-        </ul>
-      </div>
-    </section>
+  <!--контейнер для гифок-->
+  <section class="animation-images">
+    <ul class="animation-images__list">
+    </ul>
+  </section>
+</main>
+<!--<script type="module" src="pages/index.js"></script>-->
 
-  <!--</main>-->
 
+<template class="template" id="template-item">
+  <li class="animation-images__item">
+    <img src="#" class="gif" alt="гифка"/>
+  </li>
+</template>
 </body>
 </html>
