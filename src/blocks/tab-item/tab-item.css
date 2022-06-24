@@ -8,4 +8,5 @@
   display: flex;
   overflow: hidden;
   align-items: center;
+  opacity: 0.5;
 }

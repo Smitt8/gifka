@@ -5,7 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Natalya Krukova & Igor Prokazov"/>
-<!--  <link href="./pages/index.css" rel="stylesheet">-->
+  <link href="./pages/index.css" rel="stylesheet">
   <title>GifKA</title>
 </head>
 <body class="page">
@@ -13,27 +13,27 @@
 <header class="header">
   <div class="logo">
     <div class="logo__img"></div>
-    <!--    <div class="logo__text">Поиск гифки</div>-->
   </div>
 </header>
 <main class="content">
+
   <section class="menu">
     <div class="container">
       <div class="tab-control">
-        <div class="tab-item">
+        <div class="tab-item tab-item_selected tab-item_random">
           <div class="tab-item__img">
           </div>
           <div class="tab-item__text">Случайная гифка</div>
         </div>
-        <div class="tab-item">
+        <div class="tab-item tab-item-trend">
           <div class="tab-item__img"></div>
           <div class="tab-item__text">Тренды</div>
         </div>
-        <div class="tab-item">
+        <div class="tab-item tab-item-new">
           <div class="tab-item__img"></div>
           <div class="tab-item__text">Добавить новую</div>
         </div>
-        <div class="tab-item">
+        <div class="tab-item tab-item-search">
           <div class="tab-item__img"></div>
           <div class="tab-item__text">Поиск</div>
         </div>
@@ -70,7 +70,7 @@
     </ul>
   </section>
 </main>
-<!--<script type="module" src="pages/index.js"></script>-->
+<script type="module" src="pages/index.js"></script>
 
 
 <template class="template" id="template-item">

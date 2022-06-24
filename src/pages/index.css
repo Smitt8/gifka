@@ -20,3 +20,5 @@
 @import url(../blocks/btn/btn.css);
 @import url(../blocks/animation-images/__item/animation-images__item.css);
 @import url(../blocks/gif/gif.css);
+@import url(../blocks/tab-item/_selected/tab-item_selected.css);
+@import url(../blocks/search-link/_opened/search-link_opened.css);
