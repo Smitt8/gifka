@@ -45,20 +45,21 @@
   <!--  поисковая строка -->
   <section class="search-link">
     <div class="container">
-      <form class="form" name="search" novalidate>
+      <form class="search" name="search" novalidate>
         <div class="field-constant">
-          <button class="btn btn_search" type="submit">SEARCH</button>
+          <button class="btn search__submit" type="submit">SEARCH</button>
           <label class="field">
-            <input class="form__input input-link"
+            <input class="search__input"
                    type="text"
                    name='search-query'
                    placeholder="Поиск по тегу"
                    id="link"
+                   minlength="1"
                    required>
             <span class="error"
                   id="search-query-error"></span>
           </label>
-          <button class="btn btn_reset" type="button">RESET</button>
+          <button class="btn search__reset" type="button"></button>
         </div>
       </form>
     </div>

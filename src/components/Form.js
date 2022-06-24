@@ -18,12 +18,16 @@ export default class Form {
     return this._values
   }
 
+  _resetForm() {
+    this._form.reset();
+  }
+
   setEventsListeners() {
     this._form.addEventListener('submit', event => {
       this._handleSubmit(event, this._getInputsValues());
     })
     this._reset.addEventListener('click', () => {
-      this._form.reset();
+      this._resetForm();
     })
   }
 }

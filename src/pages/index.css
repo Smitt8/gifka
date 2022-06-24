@@ -13,10 +13,13 @@
 @import url(../blocks/tab-item/__text/tab-item__text.css);
 @import url(../blocks/tab-item/__img/tab-item__img.css);
 @import url(../blocks/search-link/search-link.css);
-@import url(../blocks/form/form.css);
-@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/search/__input/search__input.css);
 @import url(../blocks/animation-images/animation-images.css);
 @import url(../blocks/animation-images/__list/animation-images__list.css);
 @import url(../blocks/btn/btn.css);
 @import url(../blocks/animation-images/__item/animation-images__item.css);
 @import url(../blocks/gif/gif.css);
+@import url(../blocks/search/__reset/search__reset.css);
+@import url(../blocks/search/__reset/_enabled/search__reset_enabled.css);
+

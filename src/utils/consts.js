@@ -3,8 +3,9 @@ export const giphyConfig = {
   token: "Q0QCYBXGQAPMAZ0TQGE7d91ZammEhL08"
 };
 
-export const formConfig = {
-  formSelector: ".form",
-  inputSelector: ".form__input",
-  resetSelector: ".btn_reset"
+export const searchConfig = {
+  formSelector: ".search",
+  inputSelector: ".search__input",
+  resetSelector: ".search__reset",
+  activeResetClass: "search__reset_enabled",
 };
