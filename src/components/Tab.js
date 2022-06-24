@@ -4,7 +4,7 @@ export default class Tab {
     this._handleClick = handleClick;
   }
 
-  _selectClick(e) {
+  _selectClick = function(e) {
     function switchTab() {
       const arrTab = Array.from(document.querySelectorAll('.tab-item'));
 
@@ -13,14 +13,12 @@ export default class Tab {
       })
     }
 
-    // open() {
-    //
-    // }
-
     switchTab();
     e.currentTarget.classList.add('tab-item_selected');
     this._handleClick();
-  }
+    // const self = this;
+    // self._handleClick;
+  };
 
   setEventsListeners() {
     this._tabSelector.addEventListener('click', this._selectClick);

@@ -7,3 +7,12 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.search__submit {
+  border: 2px solid white;
+  outline: none; /* Для синий ободки */
+  /*border: 0;*/
+  /*background: transparent;*/
+  /*background: url(./src/images/icons8-поиск.svg) no-repeat center center;*/
+}

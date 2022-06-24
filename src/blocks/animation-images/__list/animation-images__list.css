@@ -8,10 +8,28 @@
   gap: 20px;
 }
 
-
-
 .field-constant {
  border-radius: 20px;
  display: flex;
+
+  /*aaa*/
+
+  height: 40px;
+  overflow: hidden;
+  width: 60px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 35ms ease-in-out;
+}
+
+.field-constant:hover {
+  width: 500px;
+  transition: all 35ms ease-in-out;
+}
+
+.field-constant:hover .search__input  {
+  width: 440px;
+  margin-left: 5px;
+  opacity: 1;
 }
 

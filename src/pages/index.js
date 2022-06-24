@@ -76,19 +76,17 @@ const btnNew = new Tab('.tab-item-new',  btnSearchClick);
 const btnTrends = new Tab('.tab-item-trend',  btnSearchClick);
 
 
-
 function btnRandomClick() {
-  //SearchString.classList.remove('search-link_opened');
+  SearchString.classList.remove('search-link_opened');
 }
 
 function btnSearchClick() {
-  //SearchString.classList.add('search-link_opened');
-  alert('123')
+  SearchString.classList.add('search-link_opened');
 }
 
 
-btnSearch.setEventsListeners();
 btnRandom.setEventsListeners();
+btnSearch.setEventsListeners();
 btnNew.setEventsListeners();
 btnTrends.setEventsListeners();
 
