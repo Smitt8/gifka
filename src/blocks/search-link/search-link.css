@@ -1,6 +1,6 @@
 .search-link {
+  display: none;
   width: 100%;
   margin-top: 20px;
-  border-bottom: 2px solid #454b55;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
 }
