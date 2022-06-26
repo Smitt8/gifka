@@ -1,4 +1,4 @@
-// import "./index.css";
+import "./index.css";
 
 
 import Api from "../components/api.js";
@@ -25,6 +25,7 @@ function addGif(link) {
   return giphy.generateItem();
 }
 
+
 const listContainer = new Section((giphy) => {
   listContainer.addItem(addGif(giphy.link));
 }, ".animation-images__list");
@@ -39,7 +40,6 @@ function handleSearchGif(event, values) {
   event.preventDefault();
   api.searchGifs(values["search-query"])
   .then( giphy => {
-    listContainer.free();
     giphy.data.forEach(item => {
       listContainer.addItem(addGif(`https://media1.giphy.com/media/${item.id}/giphy.gif`));
     });
@@ -52,7 +52,6 @@ function handleSearchGif(event, values) {
 function handleTrendGif() {
   api.loadTrending()
     .then( giphy => {
-      listContainer.free();
       giphy.data.forEach(item => {
         listContainer.addItem(addGif(`https://media1.giphy.com/media/${item.id}/giphy.gif`));
       });
@@ -62,19 +61,27 @@ function handleTrendGif() {
     })
 }
 
+function handleRandom() {
+  api.getRandom()
+    .then( objData => {
+      listContainer.addItem(addGif(`https://media1.giphy.com/media/${objData.data.id}/giphy.gif`));
+    })
+    .catch(err => {
+      console.log(err);
+    })
+}
+
+
 
 searchForm.setEventsListeners();
 
 
-//-------------------------///
-
-
-const SearchString = document.querySelector('.search-link');
 
 const btnRandom = new TabMenu('.tab-item_random',  btnRandomClick);
 const btnSearch = new TabMenu('.tab-item-search',  btnSearchClick);
 const btnNew = new TabMenu('.tab-item-new',  btnSearchClick);
 const btnTrends = new TabMenu('.tab-item-trend',  btnTrendsClick);
+
 const tabSearch = new Tab(searchConfig);
 const tabGifs = new Tab(gifsConfig);
 
@@ -83,18 +90,25 @@ function dropSelectedMenu() {
 }
 
 function btnRandomClick() {
+  listContainer.free();
+
+  for (let i = 0; i < 5; i++) {
+    handleRandom();
+  }
+
   dropSelectedMenu();
   tabSearch.close();
-  tabGifs.close();
+  tabGifs.open();
 }
 
 function btnSearchClick() {
+  listContainer.free();
   dropSelectedMenu();
-  // listContainer.free();
   tabSearch.open();
   tabGifs.open();
 }
 function btnTrendsClick() {
+  listContainer.free();
   dropSelectedMenu();
   tabSearch.close();
   tabGifs.open();
@@ -129,3 +143,5 @@ function handler(event) {
       fieldConstant.classList.remove('field-constant_hover');
   }
 }
+
+

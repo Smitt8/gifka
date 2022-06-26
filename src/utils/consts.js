@@ -17,4 +17,6 @@ export const searchConfig = {
 export const  gifsConfig = {
   tabSelector: ".tab_type_gifs",
   tabEnableClass: "tab_enabled",
-}
+};
+
+
