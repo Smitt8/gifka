@@ -1,4 +1,4 @@
-import "./index.css";
+// import "./index.css";
 
 
 import Api from "../components/api.js";
@@ -90,6 +90,7 @@ function btnRandomClick() {
 
 function btnSearchClick() {
   dropSelectedMenu();
+  // listContainer.free();
   tabSearch.open();
   tabGifs.open();
 }
@@ -110,3 +111,21 @@ btnNew.setEventsListeners();
 btnTrends.setEventsListeners();
 
 
+// --- добавить в  класс FORM
+
+const fieldConstant = document.getElementById("field-constant");
+const  searchInput = document.querySelector('.search__input');
+
+fieldConstant.onmouseover = fieldConstant.onmouseout = handler;
+
+function handler(event) {
+  if (event.type === 'mouseover') {
+    searchInput.classList.add('search__input_hover');
+    fieldConstant.classList.add('field-constant_hover');
+  }
+  if (event.type === 'mouseout') {
+      searchForm._resetForm();
+      searchInput.classList.remove('search__input_hover');
+      fieldConstant.classList.remove('field-constant_hover');
+  }
+}

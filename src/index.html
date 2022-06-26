@@ -5,6 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Natalya Krukova & Igor Prokazov"/>
+    <link href="./pages/index.css" rel="stylesheet">
   <title>GifKA</title>
 </head>
 <body class="page">
@@ -45,17 +46,20 @@
   <section class="tab tab_type_search search-link">
     <div class="container">
       <form class="search" name="search" novalidate>
-        <div class="field-constant">
-          <button class="btn search__submit" type="submit">
-<!--            <img src="./images/14-search3.png" alt="">-->
+        <div class="field-constant" id="field-constant">
+          <button class="btn search__submit" type="submit" id="search__submit">
+            <img src="./images/14-search3.png" alt="кнопка_поиск" class="btn__image">
           </button>
+
+
           <label class="field">
             <input class="search__input"
                    type="text"
                    name='search-query'
-                   placeholder="Поиск по тегу"
+                   placeholder="Введите ключевое  слово и нажмите Enter"
                    id="link"
                    minlength="1"
+                   autocomplete="off"
                    required>
             <span class="error"
                   id="search-query-error"></span>
@@ -73,7 +77,7 @@
   </section>
 </main>
 
-
+<script type="module" src="pages/index.js"></script>
 <template class="template" id="template-item">
   <li class="animation-images__item">
     <img src="#" class="gif" alt="гифка"/>

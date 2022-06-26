@@ -10,6 +10,8 @@ export const searchConfig = {
   resetSelector: ".search__reset",
   activeResetClass: "search__reset_enabled",
   tabEnableClass: "tab_enabled",
+  submitButtonSelector: ".search__submit",
+  inactiveButtonClass: 'search__submit_disabled'
 };
 
 export const  gifsConfig = {

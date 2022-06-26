@@ -9,11 +9,11 @@ export default class Form {
   }
 
   _getInputsValues() {
-    this._values = {}
+    this._values = {};
 
     this._inputs.forEach(input => {
       this._values[input.name] = input.value;
-    })
+    });
 
     return this._values
   }
@@ -25,7 +25,7 @@ export default class Form {
   setEventsListeners() {
     this._form.addEventListener('submit', event => {
       this._handleSubmit(event, this._getInputsValues());
-    })
+    });
     this._reset.addEventListener('click', () => {
       this._resetForm();
     })
