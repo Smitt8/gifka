@@ -5,7 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="author" content="Natalya Krukova & Igor Prokazov"/>
-<!--  <link href="./pages/index.css" rel="stylesheet">-->
+    <link href="./pages/index.css" rel="stylesheet">
   <title>GifKA</title>
 </head>
 <body class="page">
@@ -13,48 +13,53 @@
 <header class="header">
   <div class="logo">
     <div class="logo__img"></div>
-    <!--    <div class="logo__text">Поиск гифки</div>-->
   </div>
 </header>
 <main class="content">
+
   <section class="menu">
     <div class="container">
       <div class="tab-control">
-        <div class="tab-item">
+        <div class="tab-item tab-item_random" id="tab-item_random">
           <div class="tab-item__img">
           </div>
           <div class="tab-item__text">Случайная гифка</div>
         </div>
-        <div class="tab-item">
-          <div class="tab-item__img"></div>
-          <div class="tab-item__text">Тренды</div>
-        </div>
-        <div class="tab-item">
-          <div class="tab-item__img"></div>
-          <div class="tab-item__text">Добавить новую</div>
-        </div>
-        <div class="tab-item">
-          <div class="tab-item__img"></div>
-          <div class="tab-item__text">Поиск</div>
-        </div>
+        <div class="tab-item tab-item-trend" id="tab-item-trend">
+      <div class="tab-item__img"></div>
+      <div class="tab-item__text">Тренды</div>
+    </div>
+      <div class="tab-item tab-item-new" id="tab-item-new">
+        <div class="tab-item__img"></div>
+        <div class="tab-item__text">Добавить новую</div>
       </div>
+      <div class="tab-item tab-item-search" id="tab-item-search">
+        <div class="tab-item__img"></div>
+        <div class="tab-item__text">Поиск</div>
+      </div>
+    </div>
     </div>
   </section>
 
 
   <!--  поисковая строка -->
-  <section class="search-link">
+  <section class="tab tab_type_search search-link">
     <div class="container">
       <form class="search" name="search" novalidate>
-        <div class="field-constant">
-          <button class="btn search__submit" type="submit">SEARCH</button>
+        <div class="field-constant" id="field-constant">
+          <button class="btn search__submit" type="submit" id="search__submit">
+            <img src="./images/14-search3.png" alt="кнопка_поиск" class="btn__image">
+          </button>
+
+
           <label class="field">
             <input class="search__input"
                    type="text"
                    name='search-query'
-                   placeholder="Поиск по тегу"
+                   placeholder="Введите ключевое  слово и нажмите Enter"
                    id="link"
                    minlength="1"
+                   autocomplete="off"
                    required>
             <span class="error"
                   id="search-query-error"></span>
@@ -66,14 +71,13 @@
   </section>
 
   <!--контейнер для гифок-->
-  <section class="animation-images">
+  <section class="tab tab_type_gifs animation-images">
     <ul class="animation-images__list">
     </ul>
   </section>
 </main>
-<!--<script type="module" src="pages/index.js"></script>-->
 
-
+<script type="module" src="pages/index.js"></script>
 <template class="template" id="template-item">
   <li class="animation-images__item">
     <img src="#" class="gif" alt="гифка"/>

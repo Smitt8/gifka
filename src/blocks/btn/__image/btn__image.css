@@ -1,0 +1,4 @@
+.btn__image {
+  height: 100%;
+  object-fit: cover;
+}

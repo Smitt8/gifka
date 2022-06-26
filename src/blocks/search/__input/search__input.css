@@ -1,6 +1,11 @@
 .search__input {
-  width: 600px;
-  /*border-radius: 20px;*/
   height: 40px;
-  border: 1px solid black;
+  width: 0;
+  opacity: 0;
+  border-radius: 15px;
+  border: 1px solid green;
+  margin-left: 0 ;
+  transition: all 35ms ease-in-out;
+  outline: none;
 }
+
