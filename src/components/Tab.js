@@ -1,26 +1,16 @@
 export default class Tab {
-  constructor(tabSelector, handleClick) {
-    this._tabSelector = document.querySelector(tabSelector);
-    this._handleClick = handleClick;
+  constructor({ tabSelector, tabEnableClass}) {
+    this._tab  = document.querySelector(tabSelector);
+    this._tabEnableClass = tabEnableClass;
+
   }
 
-  _selectClick = function(e) {
-    function switchTab() {
-      const arrTab = Array.from(document.querySelectorAll('.tab-item'));
-
-      arrTab.forEach( (item)=> {
-        item.classList.remove('tab-item_selected');
-      })
-    }
-
-    switchTab();
-    e.currentTarget.classList.add('tab-item_selected');
-    this._handleClick();
-    // const self = this;
-    // self._handleClick;
-  };
-
-  setEventsListeners() {
-    this._tabSelector.addEventListener('click', this._selectClick);
+  open() {
+    this._tab.classList.add(this._tabEnableClass);
   }
+
+  close() {
+    this._tab.classList.remove(this._tabEnableClass);
+  }
+  
 }

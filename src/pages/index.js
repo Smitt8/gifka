@@ -1,18 +1,19 @@
-// import "./index.css";
+import "./index.css";
 
 
 import Api from "../components/api.js";
-import Form from "../components/Form.js";
 import SearchForm from "../components/SearchForm.js";
 
 import Section from "../components/Section.js";
 import Gif from "../components/Gif.js";
-import Tab from "../components/Tab.js";
+import TabMenu from "../components/TabMenu.js";
 
 import {
+  gifsConfig,
   giphyConfig,
   searchConfig
 } from "../utils/consts.js"
+import Tab from "../components/Tab.js";
 
 const api = new Api(giphyConfig);
 
@@ -70,20 +71,34 @@ searchForm.setEventsListeners();
 
 const SearchString = document.querySelector('.search-link');
 
-const btnRandom = new Tab('.tab-item_random',  btnRandomClick);
-const btnSearch = new Tab('.tab-item-search',  btnSearchClick);
-const btnNew = new Tab('.tab-item-new',  btnSearchClick);
-const btnTrends = new Tab('.tab-item-trend',  btnSearchClick);
-
+const btnRandom = new TabMenu('.tab-item_random',  btnRandomClick);
+const btnSearch = new TabMenu('.tab-item-search',  btnSearchClick);
+const btnNew = new TabMenu('.tab-item-new',  btnSearchClick);
+const btnTrends = new TabMenu('.tab-item-trend',  btnTrendsClick);
+const tabSearch = new Tab(searchConfig);
+const tabGifs = new Tab(gifsConfig);
 
 function btnRandomClick() {
-  SearchString.classList.remove('search-link_opened');
+  document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+  tabSearch.close();
+  tabGifs.close();
 }
 
 function btnSearchClick() {
-  SearchString.classList.add('search-link_opened');
+  document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+  tabSearch.open();
+  tabGifs.open();
+}
+function btnTrendsClick() {
+  document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+  tabSearch.close();
+  tabGifs.open();
+  handleTrendGif();
 }
 
+tabSearch.open();
+tabGifs.open();
+btnSearch.select();
 
 btnRandom.setEventsListeners();
 btnSearch.setEventsListeners();
