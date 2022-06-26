@@ -78,19 +78,23 @@ const btnTrends = new TabMenu('.tab-item-trend',  btnTrendsClick);
 const tabSearch = new Tab(searchConfig);
 const tabGifs = new Tab(gifsConfig);
 
-function btnRandomClick() {
+function dropSelectedMenu() {
   document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+}
+
+function btnRandomClick() {
+  dropSelectedMenu();
   tabSearch.close();
   tabGifs.close();
 }
 
 function btnSearchClick() {
-  document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+  dropSelectedMenu();
   tabSearch.open();
   tabGifs.open();
 }
 function btnTrendsClick() {
-  document.querySelector('.tab-item_selected').classList.remove("tab-item_selected");
+  dropSelectedMenu();
   tabSearch.close();
   tabGifs.open();
   handleTrendGif();
